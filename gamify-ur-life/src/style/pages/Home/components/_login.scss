@@ -1,0 +1,110 @@
+.login-container{
+    width: 100%;
+    display: flex;
+    .presentation, .connection{
+        width: 50%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: $ternBlue;
+    }  
+    .presentation{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        img{
+            width: 350px;
+        }
+        p{
+            font-size: 2rem;
+            text-align: center;
+            max-width: 75%;
+            margin: 12px 0;
+        }
+        @media screen and (max-width: 725px) {
+            img{
+                max-width: 90%;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .connection{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        h2{
+            margin: 0;
+            font-size: 2.8rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: $lightGrey;
+            width: 90%;
+            min-height: calc(80% - 24px);
+            margin-bottom: 24px;
+            border-radius: 5px;
+            label{
+                font-size: 1.2rem;
+                &:first-child{
+                    margin-top: 24px;
+                }
+            }
+            input{
+                margin: 16px 0;
+                width: 75%;
+                padding: 18px 12px;
+                border-radius: 5px;
+                border: none;
+                font-size: 1.2rem;
+                &::placeholder{
+                    font-size: 1.2rem;
+                }
+            }
+            .submit{
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                &:hover{
+                    background-color: $blue;
+                    color: white;
+                }
+            }
+            .error{
+                color: rgb(92, 4, 4);
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 1.1rem;
+            }
+            p{
+                span{
+                    font-weight: bold;
+                    color: orangered;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .login-container{
+        flex-direction: column;
+        .presentation, .connection{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        } 
+    }
+}  

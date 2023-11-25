@@ -1,0 +1,31 @@
+// colors
+$blue: #137C8B;
+$ternBlue: #709CA7;
+$lightGrey: #B8CBD0;
+$grey: #7A90A4;
+$greyBlue: #344D59;
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGrey;
+    #root{
+        width: 100%;
+        min-height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @media screen and (max-width: 600px) {
+        #root{
+            height: auto;
+            width: 100%;
+        }
+    }
+}

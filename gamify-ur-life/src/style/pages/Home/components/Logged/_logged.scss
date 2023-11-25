@@ -1,0 +1,153 @@
+.logged-container{
+    background: $greyBlue;
+    width: 1400px;
+    min-height: 800px;
+    display: flex;
+    .results{
+        width: 900px;
+        height: 100%;
+        .headerResults{
+            width: 100%;
+            min-height: 5%;
+            box-sizing: border-box;
+            border-bottom: 3px solid $lightGrey;
+            h2{
+                margin: 0;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                width: calc(100% - 16px);
+                min-height: 5%;
+                background: $greyBlue;
+                text-align: center;
+                padding: 12px 8px;
+                color: whitesmoke;     
+                button{
+                    border: none;
+                    background: $lightGrey;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    padding: 0 8px;
+                    &:hover{
+                        background-color: $ternBlue;
+                        color: whitesmoke;
+                        cursor: pointer;
+                    }
+                }        
+            }
+        }
+        .infos{
+            .currentDate{
+                text-align: center;
+                color: whitesmoke;
+                font-style: italic;
+                font-size: 0.8rem;
+            }
+            .resume{
+                h1{
+                    margin: 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 24px 0;
+                    color: whitesmoke;
+                }
+                .resumeData{
+                    display: flex;
+                    color: whitesmoke;
+                    .date{
+                        label{
+                            padding: 0 12px 0 0;
+                        }
+                    }
+                    .depenses, .revenus, .result{
+                        p{
+                            margin: 0;
+                            span{
+                                font-size: 1.3rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .date, .depenses, .revenus, .result{
+                        padding: 0 12px;
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        .datas{
+            width: 90%;
+            max-height: 500px;
+            border: 1px solid $lightGrey;
+            margin: 24px auto;
+            overflow: scroll;
+            overflow-x: hidden;
+            table{
+                width: 100%;
+                text-align: center;
+                th{
+                    background: $ternBlue;
+                    padding: 4px 0;
+                    text-transform: uppercase;
+                }
+                tbody{
+                    background: $lightGrey;
+                    .revenus{
+                        td.color{
+                            background: green;
+                        }
+                    }
+                    .depenses{
+                        td.color{
+                            background: darkred;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1410px) {
+    .logged-container{
+        width: 90%;
+        .results{
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .logged-container{
+        .results{
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .logged-container{
+        .results{
+            .headerResults{
+                h2{
+                    font-size: 1rem;   
+                    button{
+                        border: none;
+                        background: $lightGrey;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        padding: 0 8px;
+                    }        
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logged-container{
+        flex-direction: column;
+        .results{
+            width: 100%;
+        }
+    }
+}

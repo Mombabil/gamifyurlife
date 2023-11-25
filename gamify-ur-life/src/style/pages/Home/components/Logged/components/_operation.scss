@@ -1,0 +1,187 @@
+.operation-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
+    background: $ternBlue;
+    box-sizing: border-box;
+    border-right: 3px solid $lightGrey;
+    h2{
+        margin: 0;
+        text-transform: uppercase;
+        width: 100%;
+        min-height: 5%;
+        background: $greyBlue;
+        text-align: center;
+        padding: 12px 0;
+        color: whitesmoke;
+        box-sizing: border-box;
+        border-bottom: 3px solid $lightGrey;
+    }
+    .infos{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+    .error{
+        color: darkred;
+    }
+    .success{
+        color: $greyBlue;
+    }
+    .categorie{
+        width: 300px;
+        text-align: center;
+        h4{
+            text-transform: uppercase;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                box-sizing: border-box;   
+                border: 1px solid $greyBlue;
+                label{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 4px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .calculatrice{
+        width: 300px;
+        background: $lightGrey;
+        .input{
+            margin: 0;
+            text-align: right;
+            padding: 12px 24px;
+            font-weight: 900;
+            font-size: 3rem;
+            border: 1px solid $greyBlue;
+            display: flex;
+            justify-content: space-between;
+            .positive{
+                color: green;
+            }
+            .negative, .infos{
+                color: darkred;
+            }
+        }
+        .calc{
+            // height: 400px;
+            background: blue;
+            display: grid;
+            grid-template-areas: 
+            "a z e"
+            "q s d"
+            "w x c"
+            "t y u";
+            .touch, .submit{
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+                border: 1px solid $greyBlue;
+                background-color: $lightGrey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                font-weight: 600;
+                &:nth-child(1){ grid-area: a;}
+                &:nth-child(2){ grid-area: z;}
+                &:nth-child(3){ grid-area: e;}
+                &:nth-child(4){ grid-area: q;}
+                &:nth-child(5){ grid-area: s;}
+                &:nth-child(6){ grid-area: d;}
+                &:nth-child(7){ grid-area: w;}
+                &:nth-child(8){ grid-area: x;}
+                &:nth-child(9){ grid-area: c;}
+                &:nth-child(10){ grid-area: t;}
+                &:nth-child(11){ grid-area: y;}
+                &:nth-child(12){ grid-area: u;}
+            }
+            .touch:hover, .submit:hover{
+                color: whitesmoke;
+                cursor: pointer;
+                background: $grey;
+            }
+        }
+        .reset{
+            margin: 0;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            border: 1px solid $greyBlue;
+            padding: 12px 0;
+
+        }
+    }
+}
+@media screen and (max-width: 1410px) {
+    .operation-container{
+        width: 35%;
+        .categorie{
+            width: 90%;
+        }
+        .calculatrice{
+            width: 90%;
+            .calc{
+                .touch, .submit{
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .operation-container{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .operation-container{
+        h2{
+            font-size: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .operation-container{
+        width: 100%;
+        .categorie{
+            width: 50%;
+        }
+        .calculatrice{
+            width: 50%;
+            .calc{
+                .touch, .submit{
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .operation-container{
+        width: 100%;
+        .categorie{
+            width: 90%;
+        }
+        .calculatrice{
+            width: 90%;
+            .calc{
+                .touch, .submit{
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
